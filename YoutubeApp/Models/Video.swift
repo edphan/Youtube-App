@@ -26,6 +26,14 @@ struct Video: Decodable {
         case videoId
     }
     
+    init() {
+        self.videoId = "1234567890"
+        self.title = "I am a video"
+        self.description = "This is a description, it should be long enough to take up at least a few lines in the UI"
+        self.thumbnail = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/8148075f-b6da-4dc9-a294-8db39dcfd067/dds0jo6-4d9e2c50-9c1b-472c-8a4e-8b7d77bd3fae.jpg"
+        self.published = Date()
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)

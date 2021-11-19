@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 class VideoPreview: ObservableObject {
+    
     @Published var thumbnailData = Data()
     @Published var title: String
     @Published var date: String
@@ -17,43 +18,40 @@ class VideoPreview: ObservableObject {
     
     init(video: Video) {
         
-        // Set video and title
         self.video = video
         self.title = video.title
         
-        // Set date
+        // Set the date
         let df = DateFormatter()
-        df.dateFormat = "EEEE, MMM d, YYYY"
-        
+        df.dateFormat = "EEEE, MMM d, yyyy"
         self.date = df.string(from: video.published)
         
-        // Download image data
+        // Set the thumbnail
         guard video.thumbnail != "" else { return }
         
         // Check cache before downloading data
         if let cachedData = CacheManager.getVideoCache(video.thumbnail) {
-            // Set thumbnail data from cacheData
+            
+            // Set the thumbnail imageview
             thumbnailData = cachedData
             return
         }
         
-        // Get an URL object from the thumbnail
+        // Download the thumbnail data
         guard let url = URL(string: video.thumbnail) else { return }
         
-        // Create the request
-        AF.request(url)
-            .validate()
-            .responseData { response in
-                if let data = response.data {
-                    
-                    // Save the data in the cache
-                    CacheManager.setVideoCache(video.thumbnail, data)
-                    
-                    // Set the image
-                    DispatchQueue.main.async {
-                        self.thumbnailData = data
-                    }
+        AF.request(url).validate().responseData { response in
+            
+            if let data = response.data {
+                // Save the data in the cache
+                CacheManager.setVideoCache(video.thumbnail, data)
+                
+                // Set the image
+                DispatchQueue.main.async {
+                    self.thumbnailData = data
                 }
             }
+        }
     }
+    
 }
