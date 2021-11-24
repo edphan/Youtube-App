@@ -16,5 +16,6 @@ struct Constants {
     static let YT_EMBED_URL = "https://www.youtube.com/embed/"
     static let GID_SIGN_IN_ID = "43624966731-7k7j0kcsvgu5q9r8oo4h2f5v8rvlgham.apps.googleusercontent.com"
     static let YT_AUTH_SCOPE = "https://www.googleapis.com/auth/youtube"
-    
+    static let GID_SIGNIN_ID = "759137372574-ubt5ug3l8brusb47fhjooseef16ql6dg.apps.googleusercontent.com"
+    static let CLIENT_ID_FIREBASE = "218464734313-pj1ec0f0s194fcbm4u09n350gas7p5t1.apps.googleusercontent.com"
 }

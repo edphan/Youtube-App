@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2B1F6120274763180038F18A /* Home2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1F611F274763180038F18A /* Home2.swift */; };
+		2B22C1B527487989002674B5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 2B22C1B427487989002674B5 /* GoogleSignIn */; };
+		2B76D750274DCD6D00B44A21 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2B76D74F274DCD6D00B44A21 /* FirebaseAuth */; };
+		2B76D752274DCD6D00B44A21 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2B76D751274DCD6D00B44A21 /* FirebaseFirestore */; };
+		2B76D754274DD1F100B44A21 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76D753274DD1F100B44A21 /* Launch.swift */; };
+		2B76D758274DD30600B44A21 /* LogInOutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76D757274DD30600B44A21 /* LogInOutManager.swift */; };
+		2B76D75A274DD3ED00B44A21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B76D759274DD3ED00B44A21 /* GoogleService-Info.plist */; };
 		2BAD130327474FB200DDC66E /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD130227474FB200DDC66E /* VideoDetail.swift */; };
 		2BAD13052747511600DDC66E /* VideoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD13042747511600DDC66E /* VideoRow.swift */; };
 		2BAD13072747544B00DDC66E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD13062747544B00DDC66E /* Home.swift */; };
@@ -26,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		2B1F611F274763180038F18A /* Home2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home2.swift; sourceTree = "<group>"; };
+		2B22C1B627489099002674B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2B76D753274DD1F100B44A21 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		2B76D757274DD30600B44A21 /* LogInOutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInOutManager.swift; sourceTree = "<group>"; };
+		2B76D759274DD3ED00B44A21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BAD130227474FB200DDC66E /* VideoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetail.swift; sourceTree = "<group>"; };
 		2BAD13042747511600DDC66E /* VideoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRow.swift; sourceTree = "<group>"; };
 		2BAD13062747544B00DDC66E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -48,6 +58,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD6A5A1273F547F008DA75D /* Alamofire in Frameworks */,
+				2B76D752274DCD6D00B44A21 /* FirebaseFirestore in Frameworks */,
+				2B76D750274DCD6D00B44A21 /* FirebaseAuth in Frameworks */,
+				2B22C1B527487989002674B5 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +75,7 @@
 				2BAD13042747511600DDC66E /* VideoRow.swift */,
 				2BAD13062747544B00DDC66E /* Home.swift */,
 				2B1F611F274763180038F18A /* Home2.swift */,
+				2B76D753274DD1F100B44A21 /* Launch.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +99,8 @@
 		2BD6A58D273F4B02008DA75D /* YoutubeApp */ = {
 			isa = PBXGroup;
 			children = (
+				2B76D759274DD3ED00B44A21 /* GoogleService-Info.plist */,
+				2B22C1B627489099002674B5 /* Info.plist */,
 				2BD6A58E273F4B02008DA75D /* YoutubeAppApp.swift */,
 				2BC18F7527449BDD00CBB527 /* Views */,
 				2BD6A59D273F5263008DA75D /* ViewModels */,
@@ -118,6 +134,7 @@
 			children = (
 				2BD6A5A92741B03A008DA75D /* VideoModel.swift */,
 				2BD6A5AB2741B822008DA75D /* VideoPreview.swift */,
+				2B76D757274DD30600B44A21 /* LogInOutManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -149,6 +166,9 @@
 			name = YoutubeApp;
 			packageProductDependencies = (
 				2BD6A5A0273F547F008DA75D /* Alamofire */,
+				2B22C1B427487989002674B5 /* GoogleSignIn */,
+				2B76D74F274DCD6D00B44A21 /* FirebaseAuth */,
+				2B76D751274DCD6D00B44A21 /* FirebaseFirestore */,
 			);
 			productName = YoutubeApp;
 			productReference = 2BD6A58B273F4B02008DA75D /* YoutubeApp.app */;
@@ -180,6 +200,8 @@
 			mainGroup = 2BD6A582273F4B02008DA75D;
 			packageReferences = (
 				2BD6A59F273F547F008DA75D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2B22C1B327487989002674B5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				2B76D74E274DCD6D00B44A21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2BD6A58C273F4B02008DA75D /* Products */;
 			projectDirPath = "";
@@ -197,6 +219,7 @@
 			files = (
 				2BD6A596273F4B03008DA75D /* Preview Assets.xcassets in Resources */,
 				2BD6A593273F4B03008DA75D /* Assets.xcassets in Resources */,
+				2B76D75A274DD3ED00B44A21 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +232,10 @@
 			files = (
 				2BD6A5A62740A635008DA75D /* Response.swift in Sources */,
 				2BD6A5AA2741B03A008DA75D /* VideoModel.swift in Sources */,
+				2B76D758274DD30600B44A21 /* LogInOutManager.swift in Sources */,
 				2BD6A58F273F4B02008DA75D /* YoutubeAppApp.swift in Sources */,
 				2BAD13052747511600DDC66E /* VideoRow.swift in Sources */,
+				2B76D754274DD1F100B44A21 /* Launch.swift in Sources */,
 				2BD6A5AE2741BA2E008DA75D /* CacheManager.swift in Sources */,
 				2B1F6120274763180038F18A /* Home2.swift in Sources */,
 				2BC18F7727449BEF00CBB527 /* YoutubeVideoPlayer.swift in Sources */,
@@ -352,6 +377,7 @@
 				DEVELOPMENT_TEAM = HQ26AHGMA4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoutubeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,6 +407,7 @@
 				DEVELOPMENT_TEAM = HQ26AHGMA4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoutubeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -423,6 +450,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2B22C1B327487989002674B5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.0.2;
+			};
+		};
+		2B76D74E274DCD6D00B44A21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 8.9.1;
+			};
+		};
 		2BD6A59F273F547F008DA75D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -434,6 +477,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2B22C1B427487989002674B5 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B22C1B327487989002674B5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		2B76D74F274DCD6D00B44A21 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B76D74E274DCD6D00B44A21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2B76D751274DCD6D00B44A21 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B76D74E274DCD6D00B44A21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		2BD6A5A0273F547F008DA75D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2BD6A59F273F547F008DA75D /* XCRemoteSwiftPackageReference "Alamofire" */;

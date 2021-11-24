@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct YoutubeAppApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            Home()
+            Launch()
+                .environmentObject(LogInOutManager())
         }
     }
 }
